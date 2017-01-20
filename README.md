@@ -1,5 +1,5 @@
 # terraform-web-server
-Deploys a simple Apache web server instance in AWS using terraform.
+Deploys a simple Apache web server instance on Ubuntu 16.04 in AWS using terraform.
 
 One command builds the infrastructure.
 * terraform apply
