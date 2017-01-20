@@ -10,15 +10,26 @@ One command tears down the infrastructure.
 One command runs the tests
 * pytest --driver PhantomJS
 
-However, there are a number of dev ops tools which need to installed first.
+One command handles installing the required build environment
+* bash install-preqs.sh
+
 
 # Setup and prerequisites
+
+There are a number of dev ops tools which are required in the build environment.
+
+## Linux Version
+* Fedora 25.  Other versions may work.  But testing has only been done on Fedora 25.
+
+* dnf and git must already be installed.
 
 Clone using https protocol
 *  git clone https://github.com/dokadon/terraform-web-server.git
 
-A number packages need to exist in your system
 Your build system should be up to date with the latest packages installed
+
+The included install script installs all tools needed if they do not already exist.
+
 You will need sudo access to install them
 * terraform
 * python
@@ -34,14 +45,14 @@ An AWS user account with awscli access priveleges is needed
 You can get one here https://aws.amazon.com
 
 Export your AWS user crendentials into the env using
-* export AWS_ACCESS_KEY_ID=<<AWS_ACCESS_KEY_ID>>
-* export AWS_SECRET_ACCESS_KEY=<<AWS_SECRET_ACCESS_KEY>>
+* export AWS_ACCESS_KEY_ID=[AWS_ACCESS_KEY_ID]
+* export AWS_SECRET_ACCESS_KEY=[AWS_SECRET_ACCESS_KEY]
 
 # Building the web server infrastructure
 
 After you have set up your dev ops env
 
-To build the server
+To build the web server
 * cd web-server
 * terraform apply
 
