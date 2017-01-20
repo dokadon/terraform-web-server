@@ -1,28 +1,24 @@
 #!/usr/bin/env bash
 
-LINUX_VERSION=$(grep ^NAME /etc/*ease | sed 's/NAME=//g')
+#LINUX_VERSION=$(grep ^NAME /etc/*ease | sed 's/NAME=//g')
 
-if [ LINUX_VERSION = 'Fedora' ]
-then
     if [ -f /usr/bin/dnf ]
     then
         sudo dnf update
         sudo dnf install python python-pip wget unzip nodejs -y
-    else if [ -f /usr/bin/yum ]
+    elif [ -f /usr/bin/yum ]
+    then
         sudo yum update
         sudo yum install python python-pip wget unzip nodejs -y
+    elif [ -f /usr/bin/apt-get ]
+    then
+        sudo apt-get update -y
+        sudo apt-get upgrade -y
+        sudo apt-get install python python-pip wget unzip nodejs -y
     else
-        echo "You're running a RHEL based OS and do not have yum, or dnf installed"
-        exit(1)
+        echo "Unsupported Linux version.  Neither yum, dnf or apt-get is installed"
+        exit 1
     fi
-else if [ LINUX_VERSION = 'Ubuntu' ]
-    sudo apt-get update -y
-    sudo apt-get upgrade -y
-    sudo apt-get install python python-pip wget unzip nodejs -y
-else
-    echo "You're running neither a RHEL nor Ubuntu based OS and are therefore not supported"
-    exit(1)
-fi
 
 # Check for ssh keys and generate if necessary
 if [ -f ~/.ssh/id_rsa.pub ]
