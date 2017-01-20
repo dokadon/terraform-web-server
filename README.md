@@ -18,24 +18,24 @@ One command handles installing the required build environment
 
 There are a number of dev ops tools which are required in the build environment.
 
-## Linux Version, DNF & Git
+## Linux Version, DNF, Git & Sudo
 * Fedora 25.  Other versions may work.  But testing has only been done on Fedora 25.
 
 * dnf and git must already be installed.
+
+* sudo or root access is required
 
 ##Clone using https protocol
 *  git clone https://github.com/dokadon/terraform-web-server.git
 
 ## install-preqs.sh
-* Your build system should be up to date with the latest packages installed.  The included install script installs all tools needed if they do not already exist.
-** terraform
-** python
-** python-pip
-** wget
-** unzip
-** nodejs
-
-* You will need sudo access to install them
+* Your build system should be up to date with the latest packages installed.  The included install script installs the following tools needed if they do not already exist.
+* terraform
+* python
+* python-pip
+* wget
+* unzip
+* nodejs
 
 ## To install the prerequisites execute
 * bash install-preqs.sh
@@ -44,15 +44,13 @@ There are a number of dev ops tools which are required in the build environment.
 An AWS user account with awscli access priveleges is needed
 You can get one here https://aws.amazon.com
 
-Export your AWS user crendentials into the env using
+Export your AWS user credentials into the env before building the web server infrastructure using:
 * export AWS_ACCESS_KEY_ID=[AWS_ACCESS_KEY_ID]
 * export AWS_SECRET_ACCESS_KEY=[AWS_SECRET_ACCESS_KEY]
 
 # Building the web server infrastructure
 
-After you have set up your dev ops env
-
-To build the web server
+After setting up your devops env and exporting your AWS user credentials to the environment build the web server by:
 * cd web-server
 * terraform apply
 
