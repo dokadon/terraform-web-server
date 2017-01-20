@@ -1,5 +1,5 @@
 # terraform-web-server
-Deploys a simple Apache web server instance in AWS using terraform
+Deploys a simple Apache web server instance in AWS using terraform.
 
 One command builds the infrastructure.
 * terraform apply
@@ -18,18 +18,20 @@ One command handles installing the required build environment
 
 There are a number of dev ops tools which are required in the build environment.
 
-## Linux Version, DNF, Git & Sudo
+## Linux Version, DNF, Git, Bash & Sudo
 * Fedora 25.  Other versions may work.  But testing has only been done on Fedora 25.
 
 * dnf and git must already be installed.
 
 * sudo or root access is required
 
-##Clone using https protocol
+* bash shell access is required
+
+##Clone from within a bash shell using https protocol
 *  git clone https://github.com/dokadon/terraform-web-server.git
 
 ## install-preqs.sh
-* Your build system should be up to date with the latest packages installed.  The included install script installs the following tools needed if they do not already exist.
+* Your build system should be up to date with the latest packages installed.  The included install script installs the following tools if they do not already exist.
 * terraform
 * python
 * python-pip
@@ -50,7 +52,7 @@ Export your AWS user credentials into the env before building the web server inf
 
 # Building the web server infrastructure
 
-After setting up your devops env and exporting your AWS user credentials to the environment build the web server by:
+After setting up your devops env and exporting your AWS user credentials to the environment build the web server from within the web-server directory by:
 * cd web-server
 * terraform apply
 
@@ -66,5 +68,5 @@ To run the tests from within the web-server directory execute
 
 # Removing the web server infrastructure
 
-When you are ready to remove your infrastructure execute
+When you are ready to remove your infrastructure execute from inside the web-server directory
 * terraform destroy
