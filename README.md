@@ -18,29 +18,29 @@ One command handles installing the required build environment
 
 There are a number of dev ops tools which are required in the build environment.
 
-## Linux Version
+## Linux Version, DNF & Git
 * Fedora 25.  Other versions may work.  But testing has only been done on Fedora 25.
 
 * dnf and git must already be installed.
 
-Clone using https protocol
+##Clone using https protocol
 *  git clone https://github.com/dokadon/terraform-web-server.git
 
-Your build system should be up to date with the latest packages installed
+## install-preqs.sh
+* Your build system should be up to date with the latest packages installed.  The included install script installs all tools needed if they do not already exist.
+** terraform
+** python
+** python-pip
+** wget
+** unzip
+** nodejs
 
-The included install script installs all tools needed if they do not already exist.
+* You will need sudo access to install them
 
-You will need sudo access to install them
-* terraform
-* python
-* python-pip
-* wget
-* unzip
-* nodejs
-
-To install the prerequisites execute
+## To install the prerequisites execute
 * bash install-preqs.sh
 
+# AWS user account required
 An AWS user account with awscli access priveleges is needed
 You can get one here https://aws.amazon.com
 
