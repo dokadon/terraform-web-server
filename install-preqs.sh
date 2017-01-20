@@ -5,16 +5,16 @@
     if [ -f /usr/bin/dnf ]
     then
         sudo dnf update
-        sudo dnf install python python-pip wget unzip nodejs -y
+        sudo dnf install python python-pip wget unzip npm nodejs -y
     elif [ -f /usr/bin/yum ]
     then
         sudo yum update
-        sudo yum install python python-pip wget unzip nodejs -y
+        sudo yum install python python-pip wget unzip npm nodejs -y
     elif [ -f /usr/bin/apt-get ]
     then
         sudo apt-get update -y
         sudo apt-get upgrade -y
-        sudo apt-get install python python-pip wget unzip nodejs -y
+        sudo apt-get install python python-pip wget unzip npm nodejs -y
     else
         echo "Unsupported Linux version.  Neither yum, dnf or apt-get is installed"
         exit 1
