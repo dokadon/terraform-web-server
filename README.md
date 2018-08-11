@@ -2,16 +2,16 @@
 Deploys a simple Apache web server instance on Ubuntu 16.04 in AWS using terraform.
 
 One command builds the infrastructure.
-* terraform apply
+``terraform apply``
 
 One command tears down the infrastructure.
-* terraform destroy
+``terraform destroy``
 
 One command runs the tests
-* pytest --driver PhantomJS
+``pytest --driver PhantomJS``
 
 One command handles installing the required build environment
-* bash install-preqs.sh
+``bash install-preqs.sh``
 
 
 # Setup and prerequisites
