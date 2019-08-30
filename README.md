@@ -11,7 +11,7 @@ One command tears down the infrastructure.
 ``terraform destroy``
 
 One command runs the tests
-``pytest --driver PhantomJS``
+``pytest --driver Firefox``
 
 One command handles installing the required build environment
 ``bash install-preqs.sh``
