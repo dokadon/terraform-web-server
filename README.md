@@ -50,7 +50,9 @@ An AWS user account with awscli access priveleges is needed
 You can get one here https://aws.amazon.com
 
 Export your AWS user credentials into the env before building the web server infrastructure using:
+
 ``export AWS_ACCESS_KEY_ID=[AWS_ACCESS_KEY_ID]``
+
 ``export AWS_SECRET_ACCESS_KEY=[AWS_SECRET_ACCESS_KEY]``
 
 # Building the web server infrastructure
