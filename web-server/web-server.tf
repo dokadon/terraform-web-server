@@ -4,12 +4,6 @@ provider "aws" {
     region = "us-east-2"
 }
 
-# Deploy ssh key for instance access
-resource "aws_key_pair" "deployer" {
-  key_name = "web_server" 
-  public_key = "${file("~/.ssh/id_rsa.pub")}"
-}
-
 # Create web server
 resource "aws_instance" "web_server" {
     ami = "${data.aws_ami.ubuntu.id}"
@@ -51,5 +45,4 @@ resource "aws_instance" "web_server" {
   provisioner "local-exec" {
     command = "echo ${aws_instance.web_server.public_ip} > public-ip.txt"
   }
-
 }
