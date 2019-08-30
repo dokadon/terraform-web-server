@@ -31,7 +31,7 @@ else
     sudo unzip terraform_0.12.7_linux_amd64.zip -d /usr/local/bin
 fi
 
-sudo pip3 install --upgrade pip3
+sudo pip3 install --upgrade pip
 sudo pip3 install awscli
 sudo pip3 install -U pytest
 sudo pip3 install selenium
