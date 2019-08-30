@@ -37,8 +37,8 @@ There are a number of dev ops tools which are required in the build environment.
 ## install-preqs.sh
 * Your build system should be up to date with the latest packages installed.  The included install script installs the following tools if they do not already exist.
 * terraform
-* python
-* python-pip
+* python3
+* python3-pip
 * wget
 * unzip
 * firefox
