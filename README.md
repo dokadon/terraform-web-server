@@ -56,8 +56,11 @@ Export your AWS user credentials into the env before building the web server inf
 # Building the web server infrastructure
 
 After setting up your devops env and exporting your AWS user credentials to the environment build the web server from within the web-server directory by:
+
 ``cd web-server``
+
 ``terraform init``
+
 ``terraform apply``
 
 # Running the tests
@@ -68,10 +71,12 @@ The test framework uses
 * Firefox
 
 To run the tests from within the web-server directory execute
+
 ``pytest --driver Firefox``
 
 
 # Removing the web server infrastructure
 
 When you are ready to remove your infrastructure execute from inside the web-server directory
+
 ``terraform destroy``
