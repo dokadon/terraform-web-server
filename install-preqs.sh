@@ -4,9 +4,9 @@
 if [ -f /usr/bin/dnf ]
 then
     sudo dnf update -y
-    sudo dnf install python python-pip wget unzip nodejs -y
+    sudo dnf install python3 python3-pip wget unzip nodejs -y
 else
-    echo "dnf is not installed.  You should be using Fedora 25 which uses dnf for package installs."
+    echo "dnf is not installed.  You should be using Fedora 30 which uses dnf for package installs."
     exit 1
 fi
 
@@ -26,14 +26,13 @@ then
     echo "/usr/local/bin/terraform exists"
 else
     echo "Installing terraform"
-    wget -nc https://releases.hashicorp.com/terraform/0.8.4/terraform_0.8.4_linux_amd64.zip
+    wget -nc https://releases.hashicorp.com/terraform/0.12.7/terraform_0.12.7_linux_amd64.zip
     sudo mkdir -p /usr/local/bin
-    sudo unzip terraform_0.8.4_linux_amd64.zip -d /usr/local/bin
+    sudo unzip terraform_0.12.7_linux_amd64.zip -d /usr/local/bin
 fi
 
-sudo pip install --upgrade pip
-sudo pip install awscli
-sudo pip install -U pytest
-sudo pip install selenium
-sudo pip install pytest-selenium
-sudo npm -g install phantomjs-prebuilt
+sudo pip3 install --upgrade pip3
+sudo pip3 install awscli
+sudo pip3 install -U pytest
+sudo pip3 install selenium
+sudo pip3 install pytest-selenium
