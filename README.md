@@ -22,7 +22,7 @@ One command handles installing the required build environment
 There are a number of dev ops tools which are required in the build environment.
 
 ## Linux Version, DNF, Git, Bash & Sudo
-* Fedora 25.  Other versions may work.  But testing has only been done on Fedora 25.
+* Fedora 30.  Other versions may work.  But testing has only been done on Fedora 30.
 
 * dnf and git must already be installed.
 
@@ -40,7 +40,7 @@ There are a number of dev ops tools which are required in the build environment.
 * python-pip
 * wget
 * unzip
-* nodejs
+* firefox
 
 ## To install the prerequisites execute
 * bash install-preqs.sh
@@ -50,26 +50,28 @@ An AWS user account with awscli access priveleges is needed
 You can get one here https://aws.amazon.com
 
 Export your AWS user credentials into the env before building the web server infrastructure using:
-* export AWS_ACCESS_KEY_ID=[AWS_ACCESS_KEY_ID]
-* export AWS_SECRET_ACCESS_KEY=[AWS_SECRET_ACCESS_KEY]
+``export AWS_ACCESS_KEY_ID=[AWS_ACCESS_KEY_ID]``
+``export AWS_SECRET_ACCESS_KEY=[AWS_SECRET_ACCESS_KEY]``
 
 # Building the web server infrastructure
 
 After setting up your devops env and exporting your AWS user credentials to the environment build the web server from within the web-server directory by:
-* cd web-server
-* terraform apply
+``cd web-server``
+``terraform init``
+``terraform apply``
 
 # Running the tests
 
 The test framework uses
 * pytest
 * Selenium
-* PhantomJS
+* Firefox
 
 To run the tests from within the web-server directory execute
-* pytest --driver PhantomJS
+``pytest --driver Firefox``
+
 
 # Removing the web server infrastructure
 
 When you are ready to remove your infrastructure execute from inside the web-server directory
-* terraform destroy
+``terraform destroy``
