@@ -31,7 +31,8 @@ There are a number of dev ops tools which are required in the build environment.
 * bash shell access is required
 
 ##Clone from within a bash shell using https protocol
-*  git clone https://github.com/dokadon/terraform-web-server.git
+
+``git clone https://github.com/dokadon/terraform-web-server.git``
 
 ## install-preqs.sh
 * Your build system should be up to date with the latest packages installed.  The included install script installs the following tools if they do not already exist.
@@ -43,7 +44,8 @@ There are a number of dev ops tools which are required in the build environment.
 * firefox
 
 ## To install the prerequisites execute
-* bash install-preqs.sh
+
+``bash install-preqs.sh``
 
 # AWS user account required
 An AWS user account with awscli access priveleges is needed
