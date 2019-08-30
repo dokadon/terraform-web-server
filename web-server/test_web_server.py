@@ -1,9 +1,12 @@
 import unittest
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 class WebServerVerify(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.PhantomJS()
+        options = Options()
+        options.headless= True
+        self.driver = webdriver.Firefox(options=options)
         f = open('public-ip.txt', 'r')
         public_ip = f.read()
         self.host = "http://%s" % public_ip
