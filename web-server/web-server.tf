@@ -4,20 +4,6 @@ provider "aws" {
     region = "us-east-2"
 }
 
-# Get the AWS Ubuntu image
-data "aws_ami" "ubuntu" {
-  most_recent = true
-  filter {
-    name = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
-  }
-  filter {
-    name = "virtualization-type"
-    values = ["hvm"]
-  }
-  owners = ["099720109477"] # Canonical
-}
-
 # Deploy ssh key for instance access
 resource "aws_key_pair" "deployer" {
   key_name = "web_server" 
