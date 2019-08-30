@@ -56,12 +56,13 @@ resource "aws_instance" "web_server" {
     vpc_security_group_ids = ["${aws_security_group.web_server.id}"]
     instance_type = "t2.micro"
     key_name      = "web_server"
-    tags {
+    tags = {
         Name = "web-server"
     }
 
   connection {
     user         = "ubuntu"
+    host         = "${self.public_ip}"
     private_key  = "${file("~/.ssh/id_rsa")}"
   }
 
