@@ -30,7 +30,7 @@ There are a number of dev ops tools which are required in the build environment.
 
 * bash shell access is required
 
-##Clone from within a bash shell using https protocol
+## Clone from within a bash shell using https protocol
 
 ``git clone https://github.com/dokadon/terraform-web-server.git``
 
