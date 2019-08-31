@@ -42,6 +42,7 @@ There are a number of dev ops tools which are required in the build environment.
 * wget
 * unzip
 * firefox
+* geckodriver
 
 ## To install the prerequisites execute
 
@@ -71,8 +72,9 @@ After setting up your devops env and exporting your AWS user credentials to the 
 
 The test framework uses
 * pytest
-* Selenium
-* Firefox
+* selenium
+* firefox
+* geckodriver
 
 To run the tests from within the web-server directory execute
 
