@@ -20,16 +20,11 @@ resource "aws_instance" "web_server" {
     private_key  = "${file("~/.ssh/id_rsa")}"
   }
 
-  provisioner "remote-exec" {
-    inline = [
-      "sudo apt-get update",
-      "sudo apt-get install apache2 -y",
-      "sudo systemctl enable apache2",
-      "sudo systemctl start apache2",
-      "sudo chmod 777 /var/www/html/index.html"
-    ]
+  provisioner "file" {
+    source = "jenkins.pp"
+    destination = "/home/ubuntu/jenkins.pp"
   }
-
+    
   provisioner "file" {
     source = "index.html"
     destination = "/var/www/html/index.html"
@@ -37,9 +32,15 @@ resource "aws_instance" "web_server" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo chmod 644 /var/www/html/index.html"
+      "sudo apt-get update",
+      "sudo apt-get install apache2 -y",
+      "sudo systemctl enable apache2",
+      "sudo systemctl start apache2",
+      "sudo apt-get install puppet -y",
+      "sudo chmod 644 /var/www/html/index.html",
+      "sudo puppet apply /home/ubuntu/jenkins.pp"
     ]
-  }
+  }    
 
   # Save the public IP for testing
   provisioner "local-exec" {
