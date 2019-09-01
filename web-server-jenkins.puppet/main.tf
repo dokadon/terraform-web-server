@@ -27,12 +27,15 @@ resource "aws_instance" "web_server" {
     
   provisioner "remote-exec" {
     inline = [
+      "sudo wget https://apt.puppetlabs.com/puppet6-release-bionic.deb",
+      "sudo dpkg -i puppet6-release-bionic.deb",
       "sudo apt-get update",
       "sudo apt-get install apache2 -y",
       "sudo systemctl enable apache2",
       "sudo systemctl start apache2",
       "sudo apt-get install puppet -y",
       "sudo chmod 777 /var/www/html/index.html",
+      "sudo apt-get install openjdk-11-jdk -y",
       "sudo puppet apply /home/ubuntu/jenkins.pp"
     ]
   }       
