@@ -21,8 +21,8 @@ One command handles installing the required build environment
 
 There are a number of dev ops tools which are required in the build environment.
 
-## Linux Version, DNF, Git, Bash & Sudo
-* Fedora 30.  Other versions may work.  But testing has only been done on Fedora 30.
+## Linux Version, dnf, apt-get, git, bash & sudo
+* Fedora 30 or Ubuntu 19.04.  Other versions may work.  But testing has only been done on Fedora 30 and Ubuntu 19.04.
 
 * dnf and git must already be installed.
 
