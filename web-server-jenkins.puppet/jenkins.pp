@@ -4,7 +4,7 @@
 
   file { "/etc/apt/sources.list.d/jenkins.list":
     ensure   => file,
-    mode     => 644,
+    mode     => '644',
     owner    => root,
     group    => root,
     content  => 'deb https://pkg.jenkins.io/debian-stable binary/',
