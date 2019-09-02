@@ -27,6 +27,7 @@ resource "aws_instance" "web_server" {
     
   provisioner "remote-exec" {
     inline = [
+      "sudo apt-get update",
       "sudo wget https://apt.puppetlabs.com/puppet6-release-bionic.deb",
       "sudo dpkg -i puppet6-release-bionic.deb",
       "sudo apt-get update",
