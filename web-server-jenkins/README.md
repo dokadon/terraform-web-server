@@ -19,14 +19,6 @@ Edit these files also and replace ``example.com`` with your actual domain.  Also
 
 ``terraform apply``
 
-# Running the tests
-
-The test framework uses
-* pytest
-* selenium
-* firefox
-* geckodriver
-
 # Removing the infrastructure
 
 When you are ready to remove your infrastructure execute from inside the web-server directory
