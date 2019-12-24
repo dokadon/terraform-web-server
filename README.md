@@ -87,7 +87,9 @@ When you are ready to remove your infrastructure execute from inside the web-ser
 
 ``terraform destroy``
 
-To build a Jenkins instance on the web server:
+# Building the web server infrastructure with a Jenkins instance in it
+
+To build the web server with a Jenkins instance in it:
 
 ``cd web-server-jenkins``
 
