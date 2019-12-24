@@ -1,16 +1,16 @@
 # terraform-web-server-jenkins
-Adds to the simple web server example by deploying a Jenkins instance on the web server.
+Adds to the web server example, by deploying a Jenkins instance on the web server.
 
-One command initializes the terraform environment.
+Initializes the terraform environment.
 ``terraform init``
 
-One command builds the infrastructure.
+Build the infrastructure.
 ``terraform apply``
 
-One command tears down the infrastructure.
+Tear down the infrastructure.
 ``terraform destroy``
 
-One command handles installing the required build environment
+Installing the required build environment
 ``bash install-preqs.sh``
 
 # Setup and prerequisites
