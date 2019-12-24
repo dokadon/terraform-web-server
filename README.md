@@ -86,3 +86,9 @@ To run the tests from within the web-server directory execute
 When you are ready to remove your infrastructure execute from inside the web-server directory
 
 ``terraform destroy``
+
+To build a Jenkins instance on the web server:
+
+``cd web-server-jenkins``
+
+Then read the README.md file and follow its instructions
