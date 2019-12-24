@@ -19,6 +19,12 @@ Edit these files also and replace ``example.com`` with your actual domain.  Also
 
 ``terraform apply``
 
+Access your Jenkins instance at
+
+``http://[SERVER_NAME].[YOUR_DOMAIN]``
+
+**Give the instance at least 5 minutes to start AFTER the script has finished**
+
 # Removing the infrastructure
 
 When you are ready to remove your infrastructure execute from inside the web-server directory
