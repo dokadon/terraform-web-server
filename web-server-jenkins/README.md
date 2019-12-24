@@ -56,9 +56,9 @@ Export your AWS user credentials into the env before building the web server inf
 
 # Building the Jenkins instance
 
-After setting up your devops env and exporting your AWS user credentials to the environment build the Jenkins instance from within the web-server-jenkins.puppet directory by:
+After setting up your devops env and exporting your AWS user credentials to the environment build the Jenkins instance from within the web-server-jenkins directory by:
 
-``cd web-server-jenkins.puppet``
+``cd web-server-jenkins``
 
 Edit the ``vars.tf`` and change ``example.com`` to your actual domain.  Also, replace the other values for the other variables with your speciific values.
 
