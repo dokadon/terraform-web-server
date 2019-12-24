@@ -1,4 +1,4 @@
-# terraform-web-server
+# terraform-web-server-jenkins
 Adds to the simple web server example by deploying a Jenkins instance on the web server.
 
 One command initializes the terraform environment.
