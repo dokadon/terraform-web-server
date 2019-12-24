@@ -27,6 +27,6 @@ Access your Jenkins instance at
 
 # Removing the infrastructure
 
-When you are ready to remove your infrastructure execute from inside the web-server directory
+When you are ready to remove your infrastructure execute from inside the web-server-jenkins directory
 
 ``terraform destroy``
