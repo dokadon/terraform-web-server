@@ -54,11 +54,19 @@ Export your AWS user credentials into the env before building the web server inf
 
 ``export AWS_SECRET_ACCESS_KEY=[AWS_SECRET_ACCESS_KEY]``
 
-# Building the web server infrastructure
+# Building the Jenkins instance
 
-After setting up your devops env and exporting your AWS user credentials to the environment build the web server from within the web-server directory by:
+After setting up your devops env and exporting your AWS user credentials to the environment build the Jenkins instance from within the web-server-jenkins.puppet directory by:
 
-``cd web-server``
+``cd web-server-jenkins.puppet``
+
+Edit the ``vars.tf`` and change ``example.com`` to your actual domain.  Also, replace the other values for the other variables with your speciific values.
+
+``cd upload``
+
+Edit these files also and replace ``example.com`` with your actual domain.
+
+``cd ../``
 
 ``terraform init``
 
@@ -72,7 +80,7 @@ The test framework uses
 * firefox
 * geckodriver
 
-# Removing the web server infrastructure
+# Removing the infrastructure
 
 When you are ready to remove your infrastructure execute from inside the web-server directory
 
