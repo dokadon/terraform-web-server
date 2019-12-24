@@ -1,6 +1,6 @@
 # Create security group with web and ssh access
-resource "aws_security_group" "web_server" {
-  name = "web_server"
+resource "aws_security_group" "jenkins" {
+  name = "jenkins"
 
   ingress {
     protocol    = "tcp"
