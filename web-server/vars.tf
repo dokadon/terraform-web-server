@@ -4,9 +4,6 @@ variable region {
 variable server_name {
   default = "web-server"
 }
-variable domain_name {
-  default = "example.com."
-}
 variable ssh_key_name {
   default = "web-server"
 }
