@@ -8,6 +8,12 @@ Edit the ``vars.tf`` and change ``example.com`` to your actual domain.  Also, re
 
 ``terraform apply``
 
+Access your web server instance at
+
+``http://[SERVER_NAME].[YOUR_DOMAIN]``
+
+**Give the instance at least 5 minutes to start AFTER the script has finished**
+
 # Running the tests
 
 Run the tests from within the web-server directory
