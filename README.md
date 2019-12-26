@@ -64,6 +64,8 @@ After setting up your devops env and exporting your AWS user credentials to the 
 
 ``cd web-server``
 
+Edit the ``vars.tf`` and change ``example.com`` to your actual domain.  Also, replace the other values for the other variables with your speciific values.
+
 ``terraform init``
 
 ``terraform apply``
