@@ -1,5 +1,5 @@
 # terraform-web-server
-Deploys a simple Apache web server instance on Ubuntu 18.04 in AWS using terraform.
+Deploys a simple Apache web server instance on Ubuntu 19.04 in AWS using terraform.
 
 One command initializes the terraform environment.
 ``terraform init``
