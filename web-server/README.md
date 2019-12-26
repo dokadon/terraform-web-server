@@ -2,8 +2,6 @@
 
 After setting up your devops env and exporting your AWS user credentials to the environment build the web server from within the web-server directory by:
 
-Edit the ``vars.tf`` and replace the values for the variables with your speciific values.
-
 ``terraform init``
 
 ``terraform apply``
