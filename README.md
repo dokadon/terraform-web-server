@@ -60,34 +60,11 @@ Export your AWS user credentials into the env before building the web server inf
 
 # Building the web server infrastructure
 
-After setting up your devops env and exporting your AWS user credentials to the environment build the web server from within the web-server directory by:
+To build the web server:
 
 ``cd web-server``
 
-Edit the ``vars.tf`` and change ``example.com`` to your actual domain.  Also, replace the other values for the other variables with your speciific values.
-
-``terraform init``
-
-``terraform apply``
-
-# Running the tests
-
-The test framework uses
-* pytest
-* selenium
-* firefox
-* geckodriver
-
-To run the tests from within the web-server directory execute
-
-``pytest --driver Firefox``
-
-
-# Removing the web server infrastructure
-
-When you are ready to remove your infrastructure execute from inside the web-server directory
-
-``terraform destroy``
+Then read the README.md file and follow its instructions
 
 # Building the web server infrastructure with a Jenkins instance in it
 
@@ -96,3 +73,11 @@ To build the web server with a Jenkins instance in it:
 ``cd web-server-jenkins``
 
 Then read the README.md file and follow its instructions
+
+# Running the tests
+
+The test framework uses
+* pytest
+* selenium
+* firefox
+* geckodriver
