@@ -5,8 +5,6 @@ Adds to the web server example, by deploying a Jenkins instance on the web serve
 
 After setting up your devops env and exporting your AWS user credentials to the environment you can build the web server with a Jenkins instance in it by:
 
-``cd web-server-jenkins``
-
 Edit the ``vars.tf`` and change ``example.com`` to your actual domain.  Also, replace the other values for the other variables with your speciific values.
 
 ``cd upload``
