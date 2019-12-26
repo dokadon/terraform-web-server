@@ -1,19 +1,19 @@
 # terraform-web-server
 Deploys a simple Apache web server instance on Ubuntu 19.04 in AWS using terraform.
 
-One command initializes the terraform environment.
+Initializes the terraform environment.
 ``terraform init``
 
-One command builds the infrastructure.
+Builds the infrastructure.
 ``terraform apply``
 
-One command tears down the infrastructure.
+Tears down the infrastructure.
 ``terraform destroy``
 
-One command runs the tests
+Runs the tests
 ``pytest --driver Firefox``
 
-One command handles installing the required build environment
+Installs the required build environment
 ``bash install-preqs.sh``
 
 
