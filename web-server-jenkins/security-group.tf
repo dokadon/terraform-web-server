@@ -6,7 +6,7 @@ resource "aws_security_group" "jenkins" {
     protocol    = "tcp"
     from_port   = 22
     to_port     = 22
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [format("%s/32", var.your_ip)]
   }
 
   ingress {
@@ -15,14 +15,14 @@ resource "aws_security_group" "jenkins" {
     to_port     = 80
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   ingress {
     protocol    = "tcp"
     from_port   = 8080
     to_port     = 8080
     cidr_blocks = ["0.0.0.0/0"]
   }
-    
+
   egress {
     protocol    = -1
     from_port   = 0

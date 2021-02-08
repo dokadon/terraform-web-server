@@ -3,7 +3,7 @@ data "aws_ami" "ubuntu" {
   most_recent = true
   filter {
     name   = "name"
-    values = ["${var.ami}"]
+    values = [var.ami]
   }
   filter {
     name   = "virtualization-type"

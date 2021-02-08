@@ -3,7 +3,11 @@ Adds to the web server example, by deploying a Jenkins instance on the web serve
 
 # Building the Jenkins instance
 
-After setting up your devops env and exporting your AWS user credentials to the environment you can build the web server with a Jenkins instance in it by:
+After setting up your devops env and exporting your AWS user credentials to the environment you should:
+
+``Edit **terraform.tfvars** and set your correct IP address so that you and only you can ssh into the ec2 instance``
+
+Next, build the web server with a Jenkins instance in it, from within the web-server directory by:
 
 Edit the ``vars.tf`` and change ``example.com`` to your actual domain.  Also, replace the other values for the other variables with your speciific values.
 

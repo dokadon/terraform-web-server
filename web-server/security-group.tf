@@ -1,12 +1,12 @@
 # Create security group with web and ssh access
 resource "aws_security_group" "web_server" {
-  name = "${var.server_name}"
+  name = var.server_name
 
   ingress {
     protocol    = "tcp"
     from_port   = 22
     to_port     = 22
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [format("%s/32", var.local_ip)]
   }
 
   ingress {

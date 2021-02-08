@@ -3,18 +3,21 @@
 
 # Create web server
 resource "aws_instance" "jenkins" {
-  ami = "${data.aws_ami.ubuntu.id}"
-  vpc_security_group_ids = ["${aws_security_group.jenkins.id}"]
+  ami                    = data.aws_ami.ubuntu.id
+  vpc_security_group_ids = [aws_security_group.jenkins.id]
   instance_type          = "t2.small"
-  key_name               = "${var.ssh_key_name}"
-  user_data              = "${file("userdata.sh")}"
+  key_name               = var.ssh_key_name
+  user_data              = file("userdata.sh")
   tags = {
-    Name = "${var.server_name}"
+    Name = var.server_name
   }
 
   ebs_block_device {
-    device_name = "/dev/sdh"
+    device_name = var.device_name
     volume_size = 10
+    tags = {
+      Name = "jenkins_data"
+    }
   }
 
   # Save the public IP for testing
@@ -24,8 +27,8 @@ resource "aws_instance" "jenkins" {
 
   connection {
     user        = "ubuntu"
-    host        = "${self.public_ip}"
-    private_key = "${file("~/.ssh/id_rsa")}"
+    host        = self.public_ip
+    private_key = file("~/.ssh/id_rsa")
   }
 
   provisioner "file" {

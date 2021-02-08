@@ -1,5 +1,5 @@
 exec { 'install_jenkins_package_keys':
-  command => '/usr/bin/wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | /usr/bin/apt-key add - ',
+  command => '/usr/bin/wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | /usr/bin/apt-key add - ',
 }
 
 file { "/etc/apt/sources.list.d/jenkins.list":

@@ -3,13 +3,13 @@
 
 # Create web server
 resource "aws_instance" "web_server" {
-  ami                    = "${data.aws_ami.ubuntu.id}"
-  vpc_security_group_ids = ["${aws_security_group.web_server.id}"]
+  ami                    = data.aws_ami.ubuntu.id
+  vpc_security_group_ids = [aws_security_group.web_server.id]
   instance_type          = "t2.micro"
-  key_name               = "${var.ssh_key_name}"
-  user_data              = "${file("userdata.sh")}"
+  key_name               = var.ssh_key_name
+  user_data              = file("userdata.sh")
   tags = {
-    Name = "${var.server_name}"
+    Name = var.server_name
   }
 
   # Save the public IP for testing
@@ -19,8 +19,8 @@ resource "aws_instance" "web_server" {
 
   connection {
     user        = "ubuntu"
-    host        = "${self.public_ip}"
-    private_key = "${file("~/.ssh/id_rsa")}"
+    host        = self.public_ip
+    private_key = file("~/.ssh/id_rsa")
   }
 
   provisioner "file" {

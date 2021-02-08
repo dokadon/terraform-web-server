@@ -1,0 +1,5 @@
+region       = "us-east-2"
+server_name  = "web-server"
+ssh_key_name = "web-server"
+ami          = "ubuntu/images/hvm-ssd/ubuntu-*-20.04-amd64-server-*"
+local_ip     = "xxx.xxx.xxx.xxx"
